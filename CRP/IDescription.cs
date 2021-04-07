@@ -8,6 +8,7 @@ namespace CRP
 {
     interface IDescription
     {
+        // Properties
         int ID
         {
             get;
@@ -18,6 +19,8 @@ namespace CRP
             get;
             set;
         }
+
+        // data methods
         string ToString();
     }
 

@@ -1,7 +1,6 @@
 C:\Users\Ehmad Saeed\source\repos\CRP\CRP\bin\Debug\CRP.exe.config
 C:\Users\Ehmad Saeed\source\repos\CRP\CRP\bin\Debug\CRP.exe
 C:\Users\Ehmad Saeed\source\repos\CRP\CRP\bin\Debug\CRP.pdb
-C:\Users\Ehmad Saeed\source\repos\CRP\CRP\obj\Debug\CRP.csprojAssemblyReference.cache
 C:\Users\Ehmad Saeed\source\repos\CRP\CRP\obj\Debug\CRP.csproj.CoreCompileInputs.cache
 C:\Users\Ehmad Saeed\source\repos\CRP\CRP\obj\Debug\CRP.exe
 C:\Users\Ehmad Saeed\source\repos\CRP\CRP\obj\Debug\CRP.pdb

@@ -1,17 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CRP
 {
     class DeptOfFaculty
     {
+        // Data members
         private Faculty faculty;
         private Dept[] depts;
         private int deptCounts;
-
+        // Constructor initialize the class with a faculty
+        public DeptOfFaculty(Faculty f)
+        {
+            faculty = f;
+            this.deptCounts = 0;
+            this.depts = new Dept[5];
+            int[] arr = new int[5];
+        }
         public int getNumberofDepts()
         {
             return deptCounts;
@@ -20,23 +24,24 @@ namespace CRP
         {
             return depts;
         }
+        // Add department into the class
         public void addDept(Dept dept)
         {
-            depts[deptCounts] = dept;
+            // preventing from accessing out of bound indices
+            if (deptCounts < 5)
+            {
+                depts[deptCounts] = dept;
+                deptCounts++;
+            }
+            else Console.WriteLine("ERR: No Space for upcoming Department Record.");
         }
-        public DeptOfFaculty(Faculty f)
-        {
-            faculty = f;
-            this.deptCounts = 0;
-            this.depts = new Dept[5];
-            int[] arr = new int[5];
-        }
+        // Returns the formatted string
         public override string ToString()
         {
-            string temp = $"Faculty Name: {faculty.Name}\n";
-            foreach (Dept dept in this.depts)
+            string temp = $"\nFaculty Name: {faculty.Name}\nDepartments of Faculty: \n";
+            for (int i = 0; i < deptCounts; ++i)
             {
-                temp += $"Dept. ID: {dept.ID} || Dept. Name: {dept.Name}\n";
+                temp += $"{i+1}- {depts[i].Name}\n";
             }
             return temp;
         }

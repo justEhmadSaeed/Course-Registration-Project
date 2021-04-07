@@ -1,10 +1,12 @@
 ﻿
 namespace CRP
 {
-    class Faculty : IDescription
+    class Person : IDescription
     {
+        // Data members
         private int id;
         private string name;
+
         public int ID
         {
             get { return id; }
@@ -21,16 +23,18 @@ namespace CRP
                 name = value;
             }
         }
-        // Constructor initialize the class with an id & name
-        public Faculty(int faculty_id, string faculty_name)
+        private Address address;
+        // Constructor initialize the class with an id, name and address
+        public Person(int p_id, string p_name, Address p_address)
         {
-            this.ID = faculty_id;
-            this.Name = faculty_name;
+            this.Name = p_name;
+            this.ID = p_id;
+            this.address = p_address;
         }
         // Returns the formatted string
         public override string ToString()
         {
-            return $"Faculty ID: {ID.ToString(), 30} | Faculty Name: {Name, 28}\n";
+            return $"Person ID: {ID} | Person Name: {Name}\n {address.ToString()}";
         }
     }
 }

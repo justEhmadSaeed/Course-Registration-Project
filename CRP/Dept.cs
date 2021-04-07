@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace CRP
 {
-    class Dept: IDescription
+    class Dept : IDescription
     {
+        // Data members
         private int id;
         private string name;
-        public int ID {
+        public int ID
+        {
             get { return id; }
             set
             {
@@ -22,17 +19,19 @@ namespace CRP
             get => this.name;
             set
             {
-                name = value; 
+                name = value;
             }
         }
+        // Constructor initialize the class with an id and name
         public Dept(int dept_id, string dept_name)
         {
             this.ID = dept_id;
             this.Name = dept_name;
         }
-        public string ToString()
+        // Returns the formatted string
+        public override string ToString()
         {
-            return "Dept. ID: " + ID.ToString() + "|| Dept. Name: " + Name; 
+            return $"Deptarment ID: {ID.ToString(),27} | Deptarment Name: {Name,25}\n";
         }
 
     }
