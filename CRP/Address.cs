@@ -9,16 +9,16 @@ namespace CRP
     class Address
     {
         private string city;
-        private string streetNo;
+        private string street;
 
         public Address(string p_city, string p_street)
         {
             this.city = p_city;
-            this.streetNo = p_street;
+            this.street = p_street;
         }
         public override string ToString()
         {
-            return $"City: {city} || Street No. {streetNo}";
+            return $"\nCity: {city,37}  | Street: {street,34}";
         }
 
     }

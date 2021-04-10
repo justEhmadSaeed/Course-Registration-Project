@@ -1,7 +1,7 @@
 ﻿
 namespace CRP
 {
-    class Dept : IDescription
+    class Dept
     {
         // Data members
         private int id;
